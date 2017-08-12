@@ -1,9 +1,9 @@
 import * as React from 'react';
 
 export const Welcome: React.StatelessComponent<{}> = () => {
-  return (
-    <div>
-      <h3>Welcome To Airit</h3>
-    </div>
-  );
+    return (
+        <div>
+            <h3>Welcome to Airit</h3>
+        </div>
+    );
 };

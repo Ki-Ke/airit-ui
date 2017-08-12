@@ -11,18 +11,18 @@ module.exports = {
   },
   entry: {
     app: './index.tsx',
-    appStyles: './css/site.css',
+    appStyles: './css/main.css',
     vendor: [
       'react',
-      'react-dom',
+      'react-dom'
     ],
     vendorStyles: [
-      '../node_modules/bootstrap/dist/css/bootstrap.css',
-    ],
+      '../node_modules/bootstrap/dist/css/bootstrap.css'
+    ]
   },
   output: {
     path: path.join(basePath, 'dist'),
-    filename: '[name].js',
+    filename: '[name].js'
   },
   module: {
     rules: [
@@ -31,15 +31,15 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'awesome-typescript-loader',
         options: {
-          useBabel: true,
-        },
+          useBabel: true
+        }
       },
       {
         test: /\.css$/,
         use: [
           { loader: 'style-loader' },
-          { loader: 'css-loader' },
-        ],
+          { loader: 'css-loader' }
+        ]
       },
       {
         test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
@@ -57,7 +57,12 @@ module.exports = {
         test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
         loader: 'url-loader?limit=10000&mimetype=image/svg+xml'
       },
-    ],
+      {
+        test: /\.(gif|jpg|JPG|png)$/,
+        include: path.join(basePath, "src/images"),
+        loader: 'url-loader?limit=100000'
+      }
+    ]
   },
   devtool: 'inline-source-map',
   devServer: {
