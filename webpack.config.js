@@ -61,17 +61,18 @@ module.exports = {
   },
   devtool: 'inline-source-map',
   devServer: {
-    port: 8080,
-    noInfo: true,
+    port: 1616,
+    host: '0.0.0.0',
+    noInfo: true
   },
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'index.html',
-      hash: true,
+      hash: true
     }),
     new webpack.optimize.CommonsChunkPlugin({
-      names: ['vendor', 'manifest'],
-    }),
-  ],
+      names: ['vendor', 'manifest']
+    })
+  ]
 };
