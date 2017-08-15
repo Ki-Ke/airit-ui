@@ -12,4 +12,4 @@ export const AppRouter: React.StatelessComponent<{}> = () => {
       </Route>
     </Router>
   );
-}
+};
