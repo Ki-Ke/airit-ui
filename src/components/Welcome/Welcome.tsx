@@ -5,6 +5,7 @@ import './style/welcome.scss';
 
 // Applications Components
 import Button from '../Button/Button';
+import Input from '../Input/Input';
 
 api.config.readConfig().then((data) => {
     console.log(data);
@@ -29,6 +30,7 @@ export class Welcome extends Component<WelcomeProps, WelcomeState> {
                 <div className='bottom-triangle'>
                 </div>
                 <div className='button-container'>
+                    <Input placeHolder='User Name' type='text'/>
                     <Button buttonText='SAVE'/>
                 </div>
             </div>
