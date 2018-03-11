@@ -31,7 +31,7 @@ export class Welcome extends Component<WelcomeProps, WelcomeState> {
                 </div>
                 <div className='button-container'>
                     <Input placeHolder='User Name' type='text'/>
-                    <Button buttonText='SAVE'/>
+                    <Button id='saveButton' buttonText='SAVE'/>
                 </div>
             </div>
         );

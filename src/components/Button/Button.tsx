@@ -19,6 +19,7 @@ import './style/button.scss';
 
 export interface ButtonProps {
     buttonText: string;
+    id: string;
 }
 
 export interface ButtonState {
@@ -33,7 +34,7 @@ export default class Button extends Component<ButtonProps, ButtonState> {
     public render(): JSX.Element | null {
         return (
             <div className='button-center'>
-                <button>
+                <button id={this.props.id}>
                     <div className='button-outline'/>
                     <div className='button-outline button-outline--shift'/>
                     {this.props.buttonText}
